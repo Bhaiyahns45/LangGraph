@@ -60,6 +60,7 @@ except Exception as e:
 
 # <----------------------------------------------------------------------------------------------------------->
 
+
 client = OpenAI(api_key=st.session_state.api_key)
 
 if "openai_model" not in st.session_state:
@@ -83,8 +84,14 @@ if "messages" not in st.session_state:
 # Add a button to the sidebar to start the chat
 if st.sidebar.button("Start Chat", key="start"):
     st.markdown("<hr style='border:2px solid black'>", unsafe_allow_html=True)
-    st.session_state.messages = []  # Reset messages
-    st.session_state.messages.append({"role": "assistant", "content": "Hello! How can I assist you today?"})
+
+    if not st.session_state.api_key:
+        st.warning('API key is missing. Please set the OpenAI API key', icon="⚠️")
+
+    else:
+
+        st.session_state.messages = []  # Reset messages
+        st.session_state.messages.append({"role": "assistant", "content": "Hello! How can I assist you today?"})
 
 
 # Add a button to the sidebar to reset the chat
