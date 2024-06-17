@@ -50,12 +50,15 @@ st.markdown(overview_text)
 
 # Display the SQLGenie image
 image_path = 'sql_genie.jpg'  # Replace with the path to your image file
-try:
-    image = Image.open(image_path)
-    st.image(image, caption='SQLGenie', use_column_width=False, width=400)
-except Exception as e:
-    st.error(f"Error loading image: {e}")
 
+
+_left, mid, _right = st.columns(3)
+with mid:
+    try:
+        image = Image.open(image_path)
+        st.image(image, caption='SQLGenie', use_column_width=False, width=400)
+    except Exception as e:
+        st.error(f"Error loading image: {e}")
 
 
 # <----------------------------------------------------------------------------------------------------------->
