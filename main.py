@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 from openai import OpenAI
-from streamlit_extras.stylable_container import stylable_container
 
 
 # <--------------------------------------- Streamlit Page ---------------------------------------------------->
