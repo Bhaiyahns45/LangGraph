@@ -22,6 +22,7 @@ html_temp = """
 st.markdown(html_temp, unsafe_allow_html=True)
 
 st.sidebar.image('https://i.imgur.com/3XqSI3B.png', width=180)
+# st.sidebar.image('https://i.imgur.com/JYRtDul.png', width=180)
 st.sidebar.markdown("---")
 
 # Sidebar with text options for user input
