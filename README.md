@@ -5,6 +5,8 @@ LangGraph is a library for building stateful, multi-actor applications with LLMs
 
 LangGraph is inspired by Pregel and Apache Beam. The public interface draws inspiration from NetworkX. LangGraph is built by LangChain Inc, the creators of LangChain, but can be used without LangChain.
 
+--
+
 ### Key Features
 
 Cycles and Branching: Implement loops and conditionals in your apps.
